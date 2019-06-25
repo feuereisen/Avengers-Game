@@ -1,0 +1,78 @@
+package game;
+
+import java.util.ArrayList;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+/**
+ * 
+ * @author Agustin Bulzomi
+ * The main method to get the shit going on..
+ *
+ */
+
+public class Main {
+
+	public static void main(String[] args) throws JSONException {
+				
+		 /*Welcome welcome = new Welcome();
+		  welcome.setBounds(0,0,1000,700);
+		  welcome.setVisible(true);
+		  welcome.setResizable(false);
+		  welcome.setLocationRelativeTo(null);
+			
+			/*ArrayList<Character>mycharacters = new ArrayList<>();
+			Character Thor= new Hero("Thor", 250); //Life shouldn't be exposed.
+			Character Thanos = new Villain("Thanos", 250);
+			mycharacters.add(Thor);
+			mycharacters.add(Thanos);
+			JSONObject containerJsonHero = new JSONObject();
+			JSONObject containerJsonVillain = new JSONObject();
+			JSONArray myarrayJsonHero = new JSONArray();
+			JSONArray myarrayJsonVillain = new JSONArray();
+			for(Character mychar : mycharacters)
+			{
+				if(mychar instanceof Hero)
+					myarrayJsonHero.put(mychar.getJsonFormat());
+				else if ( mychar instanceof Villain)
+					myarrayJsonVillain.put(mychar.getJsonFormat());
+			}
+			containerJsonHero.put("Hero", myarrayJsonHero);
+			containerJsonVillain.put("Villain", myarrayJsonVillain);
+
+			String out1 = containerJsonHero.toString();
+			System.out.println(out1);
+			String out2 = containerJsonVillain.toString();
+			System.out.println(out2);		
+			JsonUtiles.grabar(containerJsonHero, "Thor");
+			JsonUtiles.grabar(containerJsonVillain, "Thanos");*/
+			/*String readThor= JsonUtiles.leer("Thor");
+			JSONObject Thor = new JSONObject(readThor);
+			System.out.println(Thor.toString());
+			String readThanos =JsonUtiles.leer("Thanos");
+			JSONObject Thanos = new JSONObject(readThanos);
+			System.out.println(Thanos.toString());
+			Stone st = new RealityStone();
+			Stone st2 = new SpaceStone();
+			Stone st3 = new TimeStone();
+			
+			int damage1 = st.produceAttack(), damage2 = st2.produceAttack(), damage3 = st3.produceAttack();
+			
+			System.out.println("The damages caused by: \nRealityStone: "+damage1+"\nSpaceStone: "+damage2+"\nTimeStone: "+damage3);*/
+		
+		//Prueba de tinch0
+		ArrayList<Weapon> myWeapons = new ArrayList<>();
+		Weapon w1 = new StormBreaker(20,30,"StormBreaker");
+		myWeapons.add(w1);
+		
+		Character p = new Hero("Thor",200,myWeapons);
+		
+		p.getAttacked(260);
+		
+		
+
+	}
+
+}
